@@ -5,7 +5,7 @@ function EducationPanel() {
 
   return (
     <div style={styles.panelContainer}>
-      {/* Tab Navigation */}
+      
       <div style={styles.tabContainer}>
         <button 
           onClick={() => setTab("species")} 
@@ -21,7 +21,7 @@ function EducationPanel() {
         </button>
       </div>
 
-      {/* Content Area */}
+    
       <div style={styles.contentArea}>
         {tab === "species" ? (
           <div style={styles.fadeIn}>
