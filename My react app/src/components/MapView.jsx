@@ -23,7 +23,7 @@ const cityCoords = {
   Newcastle: [54.9784, -1.6174]
 };
 
-// --- COLOR LOGIC ---
+// Color segments
 const getMarkerColor = (species) => {
   if (!species) return "#3B82F6"; 
   const lower = species.toLowerCase();
@@ -44,7 +44,7 @@ function MapView() {
   
   const navigate = useNavigate();
 
-  // --- SHARE FUNCTION ---
+  // Share option
   const handleShare = async (sighting) => {
     const shareText = `⚠️ Tick Sighting Alert!\nSpecies: ${sighting.species}\nLocation: ${sighting.location}\nDate: ${new Date(sighting.date).toLocaleDateString()}`;
     try {
@@ -116,13 +116,13 @@ function MapView() {
   return (
     <div style={styles.container}>
       
-      {/* --- CSS FIXES: Dark Dropdowns & Layout Reset --- */}
+   
       <style>{`
         select option { background-color: #1F2937; color: #F3F4F6; }
         #root { width: 100%; max-width: 100%; } 
       `}</style>
 
-      {/* HEADER & FILTERS */}
+     
       <div style={styles.headerRow}>
         <h2 style={styles.pageTitle}>Tick Tracker <span style={styles.subtitle}>UK Dashboard</span></h2>
         
@@ -150,10 +150,10 @@ function MapView() {
         </div>
       </div>
 
-      {/* --- FLEXBOX DASHBOARD LAYOUT (Replaced Grid) --- */}
+     
       <div style={styles.dashboardGrid}>
         
-        {/* MAP CARD (Flex Grow) */}
+        
         <div style={styles.mapCard}>
           <MapContainer center={[54.5, -3.0]} zoom={6} style={{ height: "100%", width: "100%", borderRadius: "12px", zIndex: 0 }}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; OpenStreetMap" />
@@ -196,7 +196,7 @@ function MapView() {
           )}
         </div>
 
-        {/* SIDEBAR (Fixed Width) */}
+        
         <div style={styles.sidebar}>
           
           <div style={styles.widgetCard}>
@@ -250,7 +250,7 @@ function MapView() {
   );
 }
 
-// --- MODERN CSS-IN-JS STYLES ---
+
 const styles = {
   container: { width: '100%', display: 'flex', flexDirection: 'column', gap: '1.5rem' },
   headerRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' },
@@ -263,10 +263,10 @@ const styles = {
   selectInput: { background: 'transparent', border: 'none', color: '#F3F4F6', fontSize: '0.9rem', cursor: 'pointer', outline: 'none' },
   toggleLabel: { display: 'flex', alignItems: 'center', fontSize: '0.9rem', cursor: 'pointer', color: '#D1D5DB', fontWeight: '500' },
 
-  // --- UPDATED LAYOUT: FLEXBOX (Robust) ---
+ 
   dashboardGrid: { 
     display: 'flex', 
-    flexDirection: 'row', // Stack side by side
+    flexDirection: 'row', 
     gap: '1.5rem', 
     height: 'calc(100vh - 140px)', 
     minHeight: '600px',
@@ -275,7 +275,7 @@ const styles = {
   },
   
   mapCard: { 
-    flex: 1, // Takes up all remaining space
+    flex: 1, 
     position: 'relative', 
     background: '#1F2937', 
     borderRadius: '16px', 
@@ -291,7 +291,7 @@ const styles = {
   slider: { width: '100%', accentColor: '#6366F1', cursor: 'pointer' },
 
   sidebar: { 
-    width: '350px', // Fixed width for sidebar
+    width: '350px',
     minWidth: '350px', 
     display: 'flex', 
     flexDirection: 'column', 
@@ -308,7 +308,7 @@ const styles = {
   statValue: { fontSize: '1.5rem', fontWeight: '700', color: '#6366F1' },
   miniSelect: { background: '#374151', border: 'none', color: '#D1D5DB', fontSize: '0.8rem', borderRadius: '4px', padding: '2px 6px' },
 
-  // Modal Styles
+ 
   modalCard: { position: 'absolute', top: '20px', right: '20px', width: '320px', background: '#ffffff', color: '#1F2937', padding: '1.5rem', borderRadius: '16px', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)', zIndex: 1000 },
   modalTitle: { margin: 0, fontSize: '1.25rem', fontWeight: '700' },
   closeBtn: { background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', color: '#1F2937', fontWeight: '800', lineHeight: '1' },
