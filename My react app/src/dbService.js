@@ -1,7 +1,7 @@
 
 
 export const db = {
-  // Simulate fetching data with a delay
+
   getSightings: async () => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -11,21 +11,21 @@ export const db = {
     });
   },
 
-  // Simulate saving data with validation and delay
+ 
   addSighting: async (sighting) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // 1. Simulate Server-Side Validation
+        // Simulate Server-Side Validation
         if (!sighting.location || !sighting.species) {
           reject("Server Error: Missing required fields.");
           return;
         }
 
-        // 2. "Save" to database (LocalStorage in this case)
+        // Saving to database
         try {
           const currentData = JSON.parse(localStorage.getItem("reportedSightings") || "[]");
           
-          // Add an ID and Timestamp
+          // Add an ID
           const newEntry = { 
             ...sighting, 
             id: Date.now(), 
@@ -37,7 +37,7 @@ export const db = {
         } catch (err) {
           reject("Database write failed. Storage might be full.");
         }
-      }, 800); // 0.8s network delay
+      }, 800); 
     });
   }
 };
