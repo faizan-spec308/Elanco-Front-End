@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <div style={styles.appContainer}>
-        {/* Navigation / Header could go here */}
+       
         
         <div style={styles.contentWrapper}>
           <Routes>
@@ -32,7 +32,7 @@ function App() {
 
 const styles = {
   appContainer: {
-    backgroundColor: "#111827", // Deep dark background
+    backgroundColor: "#111827", 
     minHeight: "100vh",
     color: "#F3F4F6",
     fontFamily: "'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
