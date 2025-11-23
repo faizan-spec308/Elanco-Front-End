@@ -118,7 +118,7 @@ No backend → had to simulate DB with localStorage
 Video Walkthrough
 
 📽️ An unlisted YouTube video walk-through of the project (within 10 mins) is included in the repo:
-[YouTube Link Placeholder]
+https://www.loom.com/share/88393a1637e341bdab0dfa5485374cef
 
 Final Thoughts
 
