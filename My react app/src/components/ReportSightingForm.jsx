@@ -192,25 +192,25 @@ const ReportSightingForm = () => {
 
 const styles = {
   pageContainer: {
-    backgroundColor: "#000000", // CHANGED: Pure Black
-    height: "94vh",            // CHANGED: Exact viewport height
-    width: "96vw",             // CHANGED: Exact viewport width
-    overflow: "hidden",         // CHANGED: Prevents scrolling
+    backgroundColor: "#000000", 
+    height: "94vh",            
+    width: "96vw",             
+    overflow: "hidden",         
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     margin: 0,
-    padding: 0,                 // CHANGED: Removed padding to prevent overflow
+    padding: 0,                 
     boxSizing: "border-box",
   },
   formCard: {
-    backgroundColor: "#000000", // CHANGED: Pure Black to match background
+    backgroundColor: "#000000", 
     color: "#e0e0e0",
     padding: "2.5rem",
     borderRadius: "16px",
     width: "100%",
     maxWidth: "600px",
-    boxShadow: "0 0 40px rgba(255,255,255,0.05)", // Subtle glow instead of hard shadow
+    boxShadow: "0 0 40px rgba(255,255,255,0.05)", 
     border: "1px solid #333",
   },
   header: {
@@ -241,7 +241,7 @@ const styles = {
   input: {
     width: "100%",
     padding: "0.8rem",
-    backgroundColor: "#1a1a1a", // Slightly lighter than black so inputs are visible
+    backgroundColor: "#1a1a1a", 
     border: "1px solid #444",
     borderRadius: "8px",
     color: "#fff",
